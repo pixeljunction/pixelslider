@@ -82,7 +82,7 @@
 	margin:0;
 }
 .nivo-caption a {
-	display:inline !important;
+	display:inline;
 }
 .nivo-html-caption {
     display:none;
