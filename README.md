@@ -1,4 +1,4 @@
-#pixelslider
+# Pixel Slider
 
 Pixel Slider is a WordPress plugin that adds a simple jQuery slider to your WordPress site. Uses the Nivo Slider jQuery plugin. The plugin adds a new post type to WordPress for the slides. The plugin allows one slider to be created, each post in the new post type is a slide in the slider.
 
