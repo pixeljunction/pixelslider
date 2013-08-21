@@ -10,6 +10,18 @@ To install the plugin simply download the ZIP and then add the extracted files t
 
 Once installed you can then add some slides to your slider by clicking Slides > Add New from the WordPress dashboard menu. Each slide need a title and caption (both of which are displayed in the slider) and a link if you would like to include one to link to the slide to a location.
 
+It is important to note that this plugin only allows the inclusion of ONE slider in your theme. Any slides added in the admin add to this one slider. To display the slider anywhere in your theme you can utlise the slider shortcode like so:
+
+```php
+[pxlslider height="250px"]
+```
+
+The height paramters is the height you would like the slider to be, probably the height of the images you are uploading. If you want to add this to your template code then do it like this:
+
+```php
+echo do_shortcode( '[pxlslider height="250px"]' );
+```
+
 ## Hooks
 
 The plugin contains a number of hooks that allow developers to inject theiir own code at certain points in the plugin code. These are outlined below
