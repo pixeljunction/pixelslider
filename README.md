@@ -27,3 +27,55 @@ function my_pre_slider_content() {
 
 add_action( 'pxlsld_before_slider', 'my_pre_slider_content' );
 ```
+
+### pxlsld_after_slider
+
+As above but fires directly after the slider and again outside the main slider div
+
+### pxlsld_before_slider_caption
+
+This hooks fires before the caption for the slider is outputted. An example of its use us below, perhaps for wrapping an additional div around the caption (which would need to utlise the following hook for after the slider).
+
+```php
+function my_pre_slider_caption_content() {
+
+	echo '<div class="caption-wrapper">';
+
+}
+
+add_action( 'pxlsld_before_slider_caption', 'my_pre_slider_caption_content' );
+```
+
+### pxlsld_after_slider_caption
+
+This hooks fires after the caption for the slider is outputted. An example (linked to the above example) is shown below:
+
+```php
+function my_post_slider_caption_content() {
+
+	echo '</div>';
+
+}
+
+add_action( 'pxlsld_after_slider_caption', 'my_post_slider_caption_content' );
+```
+
+## Filters
+
+Filters mean you can change the ways the plugin outputs HTML etc. Below is a list of the filters available for developers to utilise:
+
+### pxlsld_read_more_text
+
+This allows you to change the text that is displayed below the slider content that contains the links for the slide. By default the text is find out more but can easily be changed. For example:
+
+```php
+function my_readmore_text( $content ) {
+
+	$content = 'Read more about this feature...';
+	
+	return $content;
+
+}
+
+add_filter( 'pxlsld_read_more_text', 'my_readmore_text' );
+```
