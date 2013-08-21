@@ -79,3 +79,32 @@ function my_readmore_text( $content ) {
 
 add_filter( 'pxlsld_read_more_text', 'my_readmore_text' );
 ```
+
+### pxlsld_post_type_labels
+
+This filter allows you to completely change the post type labels for the slides post type. Therefore if you would rather they were labelled differently in the WordPress admin you can do that. An example of how to do this is provided below:
+
+```php
+function my_pxlslider_labels( $labels ) {
+
+	$labels = array(
+		'name' => __( 'My Slider' ),
+	    'singular_name' => __( 'My Slider' ),
+	    'add_new' => __( 'Add New', 'My Slider' ),
+	    'add_new_item' => __( 'Add New My Slider' ),
+	    'edit_item' => __( 'Edit My Slider' ),
+	    'new_item' => __( 'New My Slider' ),
+	    'view_item' => __( 'View My Slider' ),
+	    'search_items' => __( 'Search My Sliders' ),
+	    'not_found' => __( 'No SMy liders found' ),
+	    'not_found_in_trash' => __( 'No My Sliders found in trash' ),
+	    'parent_item_colon' => '',
+	    'menu_name' => __( 'My Sliders', 'soliloquy' )
+	);
+	
+	return $labels;
+
+}
+
+add_filter( 'pxlsld_post_type_labels', 'my_pxlslider_labels' );
+```
