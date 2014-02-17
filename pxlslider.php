@@ -104,7 +104,7 @@ function pxlsld_slider_shortcode( $atts ) {
 		/* echo some styles for height and width */
 		?>
 		
-			<style type="text/css">.nivoSlider {height: <?php echo esc_attr( $height ); ?> !important;}</style>
+			<style type="text/css">.nivoSlider {height: <?php echo esc_attr( $height ); ?> !important;}#slider img {display: none;}</style>
 		
 		<?php
 		
